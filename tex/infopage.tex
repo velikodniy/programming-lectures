@@ -1,0 +1,58 @@
+\newlength{\UDCLength}
+\setlength{\UDCLength}{\maxof{\widthof{УДК}}{\widthof{ББК}}}
+\noindent\makebox[\UDCLength][l]{УДК} \UDC\\
+\noindent\makebox[\UDCLength][l]{ББК} \BBK\\
+\noindent\makebox[\UDCLength][l]{} \AS
+
+\vfill{}
+
+\noindent
+    {\addfontfeature{LetterSpace=30}Рецензенты}:
+
+\noindent\textbf{О. В. Коровай}, к. ф.-м. н, доц.  каф. НОиКР ПГУ
+им. Т.~Г.~Шевченко
+
+\noindent\textbf{Е. В. Калинкова},
+ст. пр. каф. ИиВТ ПГУ им. Т. Г. Шевченко
+
+\vfill{}
+
+\newlength{\ASShiftLength}
+\setlength{\ASShiftLength}{-0.5em-\widthof{\AS}}
+\noindent {\hspace{\ASShiftLength}\AS}\hfill%
+\begin{minipage}[t]{1\columnwidth}%
+  \noindent\hspace{2em}\textbf{\AuthorI}
+
+  \noindent\hspace{2em}\Title. \SubTitle: \PubType.
+  — Тирасполь,~\Year. — \pageref{LASTPAGE}~с. %%% FIXME Количество страниц
+  \medskip{}
+
+  \hspace{2em}{\small В пособии даются общие рекомендации по написанию
+    курсовых работ, приведены требования к оформлению курсовых работ и
+    защите. Описан примерный план работы, даются советы по подготовке
+    отчёта и выступления на защите.}
+
+  \hspace{2em}{\small Предназначено для студентов специальности
+    «Информатика» и смежных специальностей.}
+\end{minipage}
+
+\noindent
+\begin{flushright}
+  \begin{minipage}[t]{0.5\columnwidth}
+    \noindent\makebox[\UDCLength][l]{УДК} \UDC\\
+    \noindent\makebox[\UDCLength][l]{ББК} \BBK
+  \end{minipage}
+\end{flushright}
+
+\vfill{}
+
+\begin{center}
+  Утверждено Научно-методическим советом ПГУ~им.~Т.~Г.~Шевченко
+\end{center}
+
+\vfill{}
+
+\noindent {\small © \AuthorI, \Year.}
+
+\thispagestyle{empty}
+\newpage

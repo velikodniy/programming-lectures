@@ -1,0 +1,6 @@
+\newcommand{\Term}[2]{\index{#1}\emph{#2}}
+\newcommand{\Lst}[1]{{\lstfont #1}}
+\newcommand{\CPP}[0]{\mbox{C\hspace{-.05em}+\hspace{-.30em}+}}
+
+\newlength{\VerticalLength}
+\newcommand{\Vertical}[1]{{\setlength{\VerticalLength}{\widthof{#1} * \real{-1} + \heightof{M}}\raisebox{\VerticalLength}{\begin{sideways}\strut #1\end{sideways}}}}
