@@ -46,22 +46,14 @@
 Например, в платформе .NET присутствует следующие встроенные базовые
 типы (в скобках приведены их названия в языке C\#):
 \begin{itemize}
-\item \Lst{Byte} (\Lst{byte}) — 1-байтовые целые со знаком
-  ($-128\ldots127$);
-\item \Lst{SByte} (\Lst{sbyte}) — 1-байтовые целые без знака
-  ($0\ldots255$);
-\item \Lst{Int16} (\Lst{short}) — 2-байтовые целые со знаком
-  ($-32768\ldots32767$);
-\item \Lst{UInt16} (\Lst{ushort}) — 2-байтовые целые без знака
-  ($0\ldots65535$);
-\item \Lst{Int32} (\Lst{int}) — 4-байтовые целые со знаком
-  ($-2147483648\ldots2147483647$);
-\item \Lst{UInt32} (\Lst{uint}) — 4-байтовые целые без знака
-  ($0\ldots4294967295$);
-\item \Lst{Int64} (\Lst{long}) — 8-байтовые целые со знаком
-  ($-9223372036854775808\ldots9223372036854775807$);
-\item \Lst{UInt64} (\Lst{ulong}) — 8-байтовые целые без знака
-  ($0\ldots18446744073709551615$);
+\item \Lst{Byte} (\Lst{byte}) — 1-байтовые целые со знаком;
+\item \Lst{SByte} (\Lst{sbyte}) — 1-байтовые целые без знака;
+\item \Lst{Int16} (\Lst{short}) — 2-байтовые целые со знаком;
+\item \Lst{UInt16} (\Lst{ushort}) — 2-байтовые целые без знака;
+\item \Lst{Int32} (\Lst{int}) — 4-байтовые целые со знаком;
+\item \Lst{UInt32} (\Lst{uint}) — 4-байтовые целые без знака;
+\item \Lst{Int64} (\Lst{long}) — 8-байтовые целые со знаком;
+\item \Lst{UInt64} (\Lst{ulong}) — 8-байтовые целые без знака;
 \item \Lst{Single} (\Lst{float}) — 4-байтовые вещественные числа с
   плавающей точкой (приблизительно
   $\pm1{,}5\times10^{-45}\ldots\pm3{,}4\times10^{38}\cup\{0\},$
@@ -119,6 +111,28 @@
   \par\end{centering}
   
   \caption{Встроенные типы языка C\#\label{tab:predefined-types}}
+\end{table}
+
+\begin{table}
+  \begin{centering}
+    \begin{tabular}{|l|c|}
+      \hline
+      Имя           & Диапазон\\
+      \hline
+      \hline
+      \Lst{byte}    & $-128\ldots127$\\
+      \Lst{sbyte}   & $0\ldots255$\\
+      \Lst{short}   & $-32768\ldots32767$\\
+      \Lst{ushort}  & $0\ldots65535$\\
+      \Lst{int}     & $-2147483648\ldots2147483647$\\
+      \Lst{uint}    & $0\ldots4294967295$\\
+      \Lst{long}    & $-9223372036854775808\ldots9223372036854775807$\\
+      \Lst{ulong}   & $0\ldots18446744073709551615$\\
+      \hline
+    \end{tabular}
+  \par\end{centering}
+  
+  \caption{Диапазоны значений целочисленных типов\label{tab:integral-types}}
 \end{table}
 
 Эта система типов в платформе .NET носит название CTS (от англ. Common
