@@ -55,18 +55,11 @@
 \item \Lst{Int64} (\Lst{long}) — 8-байтовые целые со знаком;
 \item \Lst{UInt64} (\Lst{ulong}) — 8-байтовые целые без знака;
 \item \Lst{Single} (\Lst{float}) — 4-байтовые вещественные числа с
-  плавающей точкой (приблизительно
-  $\pm1{,}5\times10^{-45}\ldots\pm3{,}4\times10^{38}\cup\{0\},$
-  точность — 7 значащих десятичных цифр);
+  плавающей точкой;
 \item \Lst{Double} (\Lst{double}) — 8-байтовые вещественные числа с
-  плавающей точкой (приблизительно
-  $\pm5{,}0\times10^{-324}\ldots\pm1{,}7\times10^{308}\cup\{0\},$
-  точность — 16 значащих десятичных цифр);
+  плавающей точкой;
 \item \Lst{Decimal} (\Lst{decimal}) — 16-байтовые вещественные
-  числа, отличающееся тем, что представляет числа без округления
-  (приблизительно
-  $\pm1{,}0\times10^{-28}\ldots\pm7{,}9\times10^{28}\cup\{0\},$
-  точность — 28 значащих десятичных цифр);
+  числа, отличающееся тем, что представляет числа без округления;
 \item \Lst{Boolean} (\Lst{bool}) — логическое значение («ложь» либо
   «истина»);
 \item \Lst{Char} (\Lst{char}) — 2-байтовые символы Юникода (Юникод
@@ -132,7 +125,32 @@
     \end{tabular}
   \par\end{centering}
   
-  \caption{Диапазоны значений целочисленных типов\label{tab:integral-types}}
+  \caption{Диапазоны значений целочисленных
+    типов\label{tab:integral-types}}
+\end{table}
+
+\begin{table}
+  \begin{centering}
+    \begin{tabular}{|l|c|c|}
+      \hline
+      Имя            & Диапазон & Точность, цифр\\
+      \hline
+      \hline
+      \Lst{float}    &
+      $\pm1{,}5\times10^{-45}\ldots\pm3{,}4\times10^{38}\cup\{0\}$   &
+      7\\
+      \Lst{double}   &
+      $\pm5{,}0\times10^{-324}\ldots\pm1{,}7\times10^{308}\cup\{0\}$ &
+      15--16\\
+      \Lst{decimal}  &
+      $\pm1{,}0\times10^{-28}\ldots\pm7{,}9\times10^{28}\cup\{0\}$   &
+      28\\
+      \hline
+    \end{tabular}
+  \par\end{centering}
+  
+  \caption{Диапазоны значений типов, описывающих действительные
+    числа\label{tab:real-types}}
 \end{table}
 
 Эта система типов в платформе .NET носит название CTS (от англ. Common
