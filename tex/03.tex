@@ -130,7 +130,8 @@
       \Lst{object}  & Базовый тип для остальных типов\\
       \hline
     \end{tabular}
-  \par\end{centering}
+    \par
+  \end{centering}
   
   \caption{Встроенные типы языка C\#\label{tab:predefined-types}}
 \end{table}
@@ -152,7 +153,8 @@
       \Lst{ulong}   & $0\ldots18446744073709551615$\\
       \hline
     \end{tabular}
-  \par\end{centering}
+    \par
+  \end{centering}
   
   \caption{Диапазоны значений целочисленных
     типов\label{tab:integral-types}}
@@ -176,7 +178,8 @@
       28\\
       \hline
     \end{tabular}
-  \par\end{centering}
+    \par
+  \end{centering}
   
   \caption{Диапазоны значений типов, описывающих действительные
     числа\label{tab:real-types}}
@@ -232,32 +235,15 @@ IA-32, однако, подобные отношения не сохранены
 использовать суффикс «\Lst{U}» для указания на то, что
 целочисленный тип беззнаковый. % лучше заглавные
 
-\begin{example}
-  \Lst{+12} (тип \Lst{int}), \Lst{12U} (тип \Lst{uint}),
-  \Lst{12L} (тип \Lst{long}), \Lst{12UL} (тип \Lst{ulong})
-  — все эти литералы соответствуют числу двенадцать.
-\end{example}
-
 Также существует возможность использовать шестнадцатеричную форму
 записи чисел. В этом случае необходимо добавить перед литералом
 «\Lst{0x}».
-
-\begin{example}
-  \Lst{0x12} ($12_{16}=18_{10}$), \Lst{0x1B}
-  ($\mathrm{1B}_{16}=27_{10}$), \Lst{0xAUL}
-  ($\mathrm{A}_{16}=10_{10},$ тип \Lst{ulong}).
-\end{example}
 
 Особенностью \Term{Литерал!вещественный}{вещественных литералов}
 является использование точки для отделения дробной части числа. По
 умолчанию, вещественные литералы принадлежат типу \Lst{double}. Для
 указания на принадлежность к типу \Lst{float} необходимо добавить
 суффикс «\Lst{F}», к типу \Lst{decimal} — суффикс «\Lst{M}».
-
-\begin{example}
-  \Lst{12.3} (тип \Lst{double}), \Lst{12.3F} (тип
-  \Lst{float}).
-\end{example}
 
 Для записи больших чисел можно использовать специальную нотацию вида:
 «\Lst{\uline{число}}\Lst{E}\Lst{\uline{порядок}}».  Где
@@ -267,19 +253,9 @@ IA-32, однако, подобные отношения не сохранены
 %$\text{\Lst{число}}\times10^{\text{\Lst{порядок}}}.$ %%
 % FIXME!!!
 
-\begin{example}
-  \Lst{-12.3E2} ($-12{,}2\times10^{2}=1230{,}0$), \Lst{1.2E-2}
-  ($1{,}2\times10^{-2}=0{,}012$).
-\end{example}
-
 \Term{Литерал!символьный}{Символьные литералы} представляют собой
 отдельные символы, заключённые в одинарные кавычки. Тип символьных
 литералов — \Lst{char}.
-
-\begin{example}
-  \texttt{'A'}, \Lst{'\%'}, \Lst{' '} — символы «A», «\%» и
-  пробел соответственно.
-\end{example}
 
 Для записи самого символа одинарной кавычки и некоторых других
 символов применяют экранирование — запись последовательности,
@@ -291,7 +267,7 @@ IA-32, однако, подобные отношения не сохранены
   \begin{centering}
     \begin{tabular}{|c|l|}
       \hline 
-      Последовательность & Символ\tabularnewline
+      Последовательность & Символ\\
       \hline 
       \hline 
       \Lst{\textbackslash '} & Одинарная кавычка («'»)\\
@@ -317,7 +293,7 @@ IA-32, однако, подобные отношения не сохранены
       \Lst{\textbackslash v} & Переход на символ вниз\\
       \hline 
     \end{tabular}
-  \end{centering}
+    \par\end{centering}
 
   \caption{Специальные символы\label{tab:escseq}}
 \end{table}
@@ -327,27 +303,56 @@ IA-32, однако, подобные отношения не сохранены
 «\Lst{\textbackslash u\uline{код}}», где
 \Lst{\uline{код}} — четыре шестнадцатеричные цифры кода символа.
 
-\begin{example}
-  \Lst{'\textbackslash u004A'} (символ «J»),
-  \Lst{'\textbackslash u03BE'} (символ «$\xi$»).
-\end{example}
-
 \Term{Литерал!строковый}{Строковые литералы} — это последовательности
 из нуля и более символов, заключённые в двойные кавычки. Строка из
 нуля символов называется \Term{Строка!пустая}{пустой
   строкой}. Строковые литералы относятся к типу \Lst{string}.
 
-\begin{example}
-  \Lst{""} (пустая строка),
-  \Lst{"abc"} (строка из трёх
-  символов),
-  \Lst{"abc\textbackslash n"} (строка,
-  содержащая специальные символы).
-\end{example}
-
 \Term{Литерал!логический}{Логические литералы} отностяся к типу
 \Lst{bool} и позволяют представить только одно из двух значений:
 истина (литерал \Lst{true}) либо ложь (\Lst{false}).
+
+\begin{table}
+  \begin{centering}
+    \begin{tabular}{|c|c|c|}
+      \hline 
+      Литерал & Значение & Тип \\
+      \hline 
+      \hline 
+      \Lst{+12} & $12$ & \Lst{int}\\
+      \hline 
+      \Lst{12U} & $12$ & \Lst{uint}\\
+      \hline 
+      \Lst{-12L} & $-12$ & \Lst{long}\\
+      \hline 
+      \Lst{-12UL} & $-12$ & \Lst{ulong}\\
+      \hline 
+      \Lst{0x12} & $12_{16}=18_{10}$ & \Lst{int}\\
+      \hline 
+      \Lst{0x1BUL} & $1\mathrm{B}_{16}=27_{10}$ & \Lst{ulong}\\
+      \hline 
+      \Lst{12.3} & $12{,}3$ & \Lst{double}\\
+      \hline 
+      \Lst{12.3F} & $12{,}3$ & \Lst{float}\\
+      \hline 
+      \Lst{-12.3E2} & $-12{,}3 \times 10^2 = -1230$ & \Lst{double}\\
+      \hline 
+      \Lst{1.2E-2F} & $1{,}2 \times 10^{-2} = 0{,}012$ & \Lst{float}\\
+      \hline 
+      \Lst{'A'} & «A» & \Lst{char}\\
+      \hline 
+      \Lst{"Abc"} & «Abc» & \Lst{string}\\
+      \hline 
+      \Lst{'\textbackslash u004A'} & «J» & \Lst{char}\\
+      \hline 
+      \Lst{"\textbackslash u03BE"} & «$\xi$» & \Lst{string}\\
+      \hline 
+    \end{tabular}
+    \par
+  \end{centering}
+
+  \caption{Примеры литералов\label{tab:literal-example}}
+\end{table}
 
 Иногда возникает необходимость сохранить в переменной значение, не
 принадлежащее типу. В этом случае в C\# можно использовать
@@ -657,7 +662,7 @@ const double g = 9.81;
     }%
     \bitbox{28}{#4}%
   }
-
+  
   \begin{bytefield}{48}
     \begin{rightwordgroup}{1 Гбайт}
       \memsection{ffff ffff}{c000 0000}{6}{Память ядра операционной системы}
