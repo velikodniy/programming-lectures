@@ -36,10 +36,11 @@
 %%% Шрифты документа %%%
 \usepackage{fontspec}					% Использовать OTF/TTF
 \defaultfontfeatures{Mapping=tex-text}
+%\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
 \setmainfont{Charis SIL}
 \setsansfont{Liberation Sans}
-\setmonofont{Liberation Mono}
-%\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
+\setmonofont{DejaVu Sans Mono}
+
 
 %%% Семейства шрифтов %%%
 \newfontfamily\footfont{Droid Sans} 
@@ -113,6 +114,7 @@
   pdftitle={\Title},
   pdfauthor={\Author}
 }
+\urlstyle{same}
 
 %%% Локализация %%%
 \usepackage{xunicode}
