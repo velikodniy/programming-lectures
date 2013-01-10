@@ -81,20 +81,41 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}} 
-\fancyfoot[LE]{\footfont \textbf{\thepage}  |\ Глава \thechapter.  \nouppercase{\leftmark{}}}
-\fancyfoot[RO]{\footfont \nouppercase{\rightmark{}}\  |\ \textbf{\thepage}}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Отображать названия
+                                                % в нижнем регистре
+
+\fancyfoot[LE]{
+  \ifx\ChaptersEndQ\undefined {
+    \ifnum \thechapter>0 {
+      \footfont\textbf{\thepage}~|~Глава \thechapter. \nouppercase{\leftmark{}}
+    } \else {
+      \footfont\textbf{\thepage}~|~\ChapterTitle
+    } \fi
+  } \else {
+    \footfont\textbf{\thepage}~|~\ChapterTitle
+  } \fi
+}
+\fancyfoot[RO]{
+  \ifx\ChaptersEndQ\undefined {
+    \ifnum \thechapter>0 {
+      \footfont \nouppercase{\rightmark{}}~|~\textbf{\thepage}
+    } \else {
+      \footfont\textbf{\thepage}~|~\ChapterTitle
+    } \fi
+  } \else {
+    \footfont\textbf{\thepage}~|~\ChapterTitle
+  } \fi
+}
+
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.4pt}
+
 \fancypagestyle{plain}{
   \fancyhf{}
   \fancyfoot[C]{\footfont\textbf{\thepage}}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0.4pt}
-}
-\newcommand{\simplefancy}[0]{
-  \fancyfoot[LE]{\footfont \textbf{\thepage}  |\ \nouppercase{\leftmark{}}}
-  \fancyfoot[RO]{\footfont \nouppercase{\rightmark{}}\  |\ \textbf{\thepage}}
 }
 
 %%% Настройки PDF %%%

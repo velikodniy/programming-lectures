@@ -6,3 +6,7 @@
 \newcommand{\Vertical}[1]{{\setlength{\VerticalLength}{\widthof{#1} * \real{-1} + \heightof{M}}\raisebox{\VerticalLength}{\begin{sideways}\strut #1\end{sideways}}}}
 
 \newcommand{\Par}[1]{\subsection{#1}}
+
+\newcommand{\SetChapterTitle}[1]{\def\ChapterTitle{#1}}
+\newcommand{\ChaptersEnd}[0]{\def\ChaptersEndQ1}
+\newcommand{\ChapterS}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}\SetChapterTitle{#1}}

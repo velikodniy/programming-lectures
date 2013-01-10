@@ -6,9 +6,7 @@
 \include{title}         % Титульный лист
 \include{infopage}      % Страница с выходными данными
 
-{\pagestyle{plain}
 \include{preface}       % Введение
-}
 
 \include{01} % Основные понятия
 \include{02} % Трансляция и выполнение программ
@@ -19,10 +17,11 @@
 %\include{07} % Структуры данных
 %\include{08} % Алгоритмы обработки данных
 
-\simplefancy
-\include{afterword}      % Заключение
-\bibliography{references}
-\printindex{}            % Индекс
-\tableofcontents         % Оглавление
+\ChaptersEnd
+\include{afterword}                                 % Заключение
+
+\SetChapterTitle{\refname}\bibliography{references} % Литература
+\SetChapterTitle{\indexname}\printindex{}           % Индекс
+\SetChapterTitle{\contentsname}\tableofcontents     % Оглавление
 \label{LASTPAGE}
 \end{document}
