@@ -9,6 +9,6 @@ REFS=references.bib
 book:
 	xelatex --output-directory="$(BUILDDIR)" --jobname="$(JOB)" "$(MAIN)"
 	cd "$(BUILDDIR)"; makeindex "$(JOB).idx"
-	ln -s "$(CWD)/$(REFS)" "$(BUILDDIR)/$(REFS)"
+	ln -fs "$(CWD)/$(REFS)" "$(BUILDDIR)/$(REFS)"
 	cd "$(BUILDDIR)"; bibtex "$(JOB)"
 	xelatex --output-directory="$(BUILDDIR)" --jobname="$(JOB)" "$(MAIN)"
