@@ -20,10 +20,16 @@
 
 \include{afterword}                                 % Заключение
 
-\SetChapterTitle{\refname}\bibliography{references} % Литература
+\SetChapterTitle{\refname}                          % Литература
+\bibliography{references} 
+\addcontentsline{toc}{chapter}{\refname}
 \nocite{*}                                          % Печать всей библиографии из базы
 
-\SetChapterTitle{\indexname}\printindex{}           % Индекс
-\SetChapterTitle{\contentsname}\tableofcontents     % Оглавление
+\SetChapterTitle{\indexname}                        % Индекс
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex{}                                       
+
+\SetChapterTitle{\contentsname}                     % Оглавление
+\tableofcontents
 \label{LASTPAGE}
 \end{document}
