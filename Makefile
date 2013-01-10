@@ -1,6 +1,6 @@
 JOB=programming-lectures
 
-HOME=.
+HOME:=$(shell readlink -f .)
 BUILDDIR=$(HOME)/build
 
 .PHONY: all
