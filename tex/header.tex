@@ -18,12 +18,22 @@
 %%% Математические окружения %%%
 \usepackage{amsthm}
 
-\theoremstyle{definition}
-\newtheorem{defn}{\protect\definitionname}[chapter]
+\newtheoremstyle{DefinitionStyle}  % name
+                {3pt}              % Space above
+                {3pt}              % Space below
+                {}                 % Body font
+                {}                 % Indent amount
+                {\scshape}         % Theorem head font
+                {.}                % Punctuation after theorem head
+                {.5em}             % Space after theorem head
+                {}                 % Theorem head spec (can be left empty, meaning ‘normal’)
+
+\theoremstyle{DefinitionStyle}
+\newtheorem*{defn}{\protect\definitionname}
 \providecommand{\definitionname}{Определение}
 
-\theoremstyle{definition}
-\newtheorem{example}{\protect\examplename}[chapter]
+\theoremstyle{DefinitionStyle}
+\newtheorem*{example}{\protect\examplename}
 \providecommand{\examplename}{Пример}
 
 %%% Математические шрифты %%%
