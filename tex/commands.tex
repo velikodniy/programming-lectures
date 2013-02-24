@@ -7,6 +7,4 @@
 
 \newcommand{\Par}[1]{\subsection{#1}}
 
-\newcommand{\SetChapterTitle}[1]{\def\ChapterTitle{#1}}
-\newcommand{\ChaptersEnd}[0]{\def\ChaptersEndQ{1}}
-\newcommand{\ChapterS}[1]{\SetChapterTitle{#1}\chapter*{#1}\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\ChapterS}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}\markboth{#1}{#1}}

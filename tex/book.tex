@@ -6,7 +6,13 @@
 \include{title}         % Титульный лист
 \include{infopage}      % Страница с выходными данными
 
+\cleardoublepage
+\pagestyle{basicstyle}
+
 \include{preface}       % Введение
+
+\cleardoublepage
+\pagestyle{fancystyle}
 
 \include{01} % Основные понятия
 \include{02} % Трансляция и выполнение программ
@@ -20,20 +26,19 @@
 %\include{10} % Алгоритмы обработки данных
 %\include{11} % Технология программирования
 %\include{12} % Элементы функционального программирования
-\ChaptersEnd{}
+
+\cleardoublepage
+\pagestyle{basicstyle}
 
 \include{afterword}                                 % Заключение
 
-\SetChapterTitle{\refname}                          % Литература
-\bibliography{references} 
 \addcontentsline{toc}{chapter}{\refname}
+\bibliography{references} 
 \nocite{*}                                          % Печать всей библиографии из базы
 
-\SetChapterTitle{\indexname}                        % Индекс
 \addcontentsline{toc}{chapter}{\indexname}
 \printindex{}                                       
 
-\SetChapterTitle{\contentsname}                     % Оглавление
 \tableofcontents
 \label{LASTPAGE}
 \end{document}
