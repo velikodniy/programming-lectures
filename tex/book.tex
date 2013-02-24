@@ -29,12 +29,14 @@
 \include{afterword}                                 % Заключение
 
 \addcontentsline{toc}{chapter}{\refname}
-\bibliography{references} 
+\bibliography{references}                           % Библиография
 \nocite{*}                                          % Печать всей библиографии из базы
 
 \addcontentsline{toc}{chapter}{\indexname}
-\printindex{}                                       
+\printindex{}                                       % Указатель
 
-\tableofcontents
+\tableofcontents                                    % Оглавление
+
+\include{outinfo}                                   % Выпускные сведения
 \label{LASTPAGE}
 \end{document}
