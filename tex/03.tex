@@ -285,6 +285,49 @@ NaN.
 \item литерал null.
 \end{enumerate}
 
+Примеры литералов приведены в таблице~\ref{tab:literal-example}.
+
+\begin{table}
+  \begin{centering}
+    \begin{tabular}{|c|c|c|}
+      \hline 
+      Литерал & Значение & Тип \\
+      \hline 
+      \hline 
+      \Lst{+12} & $12$ & \Lst{int}\\
+      \hline 
+      \Lst{12U} & $12$ & \Lst{uint}\\
+      \hline 
+      \Lst{-12L} & $-12$ & \Lst{long}\\
+      \hline 
+      \Lst{-12UL} & $-12$ & \Lst{ulong}\\
+      \hline 
+      \Lst{0x12} & $12_{16}=18_{10}$ & \Lst{int}\\
+      \hline 
+      \Lst{0x1BUL} & $1\mathrm{B}_{16}=27_{10}$ & \Lst{ulong}\\
+      \hline 
+      \Lst{12.3} & $12{,}3$ & \Lst{double}\\
+      \hline 
+      \Lst{12.3F} & $12{,}3$ & \Lst{float}\\
+      \hline 
+      \Lst{-12.3E2} & $-12{,}3 \times 10^2 = -1230$ & \Lst{double}\\
+      \hline 
+      \Lst{1.2E-2F} & $1{,}2 \times 10^{-2} = 0{,}012$ & \Lst{float}\\
+      \hline 
+      \Lst{'A'} & «A» & \Lst{char}\\
+      \hline 
+      \Lst{"Abc"} & «Abc» & \Lst{string}\\
+      \hline 
+      \Lst{'\textbackslash u004A'} & «J» & \Lst{char}\\
+      \hline 
+      \Lst{"\textbackslash u03BE"} & «$\xi$» & \Lst{string}\\
+      \hline 
+    \end{tabular}\par
+  \end{centering}
+
+  \caption{Примеры литералов\label{tab:literal-example}}
+\end{table}
+
 Рассмотрим каждый из видов на примерах.
 
 \Par{Целочисленные литералы}
@@ -402,48 +445,6 @@ NaN.
 \Term{Литерал!логический}{Логические литералы} относятся к типу
 \Lst{bool} и позволяют представить только одно из двух значений:
 истина (литерал \Lst{true}) либо ложь (\Lst{false}).
-
-% переместить
-\begin{table}
-  \begin{centering}
-    \begin{tabular}{|c|c|c|}
-      \hline 
-      Литерал & Значение & Тип \\
-      \hline 
-      \hline 
-      \Lst{+12} & $12$ & \Lst{int}\\
-      \hline 
-      \Lst{12U} & $12$ & \Lst{uint}\\
-      \hline 
-      \Lst{-12L} & $-12$ & \Lst{long}\\
-      \hline 
-      \Lst{-12UL} & $-12$ & \Lst{ulong}\\
-      \hline 
-      \Lst{0x12} & $12_{16}=18_{10}$ & \Lst{int}\\
-      \hline 
-      \Lst{0x1BUL} & $1\mathrm{B}_{16}=27_{10}$ & \Lst{ulong}\\
-      \hline 
-      \Lst{12.3} & $12{,}3$ & \Lst{double}\\
-      \hline 
-      \Lst{12.3F} & $12{,}3$ & \Lst{float}\\
-      \hline 
-      \Lst{-12.3E2} & $-12{,}3 \times 10^2 = -1230$ & \Lst{double}\\
-      \hline 
-      \Lst{1.2E-2F} & $1{,}2 \times 10^{-2} = 0{,}012$ & \Lst{float}\\
-      \hline 
-      \Lst{'A'} & «A» & \Lst{char}\\
-      \hline 
-      \Lst{"Abc"} & «Abc» & \Lst{string}\\
-      \hline 
-      \Lst{'\textbackslash u004A'} & «J» & \Lst{char}\\
-      \hline 
-      \Lst{"\textbackslash u03BE"} & «$\xi$» & \Lst{string}\\
-      \hline 
-    \end{tabular}\par
-  \end{centering}
-
-  \caption{Примеры литералов\label{tab:literal-example}}
-\end{table}
 
 \Par{Литерал \Lst{null}}
 
