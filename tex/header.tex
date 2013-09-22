@@ -39,24 +39,23 @@
 %%% Математические шрифты %%%
 \usepackage{amssymb}
 \usepackage{unicode-math}
-\setmathfont{TG Pagella Math}
 
 %%% Шрифты документа %%%
 \usepackage{fontspec}					% Использовать OTF/TTF
-\defaultfontfeatures{Mapping=tex-text}
-%\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
+\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
 \setmainfont{Charis SIL}
-\setsansfont[Scale=0.9]{Liberation Sans}
-\setmonofont[Scale=0.9]{Liberation Mono}
+\setsansfont{Liberation Sans}
+\setmonofont{Ubuntu Mono}
+\setmathfont{TeX Gyre Pagella Math}
 
 %%% XeTeX fix
 \newfontfamily{\cyrillicfont}{Charis SIL}
 
 %%% Семейства шрифтов %%%
-\newfontfamily\footfont[Scale=0.85]{Droid Sans} 
+\newfontfamily\footfont{Droid Sans} 
 \newfontfamily\titlefont{Ubuntu} 
-\newfontfamily\lstfont[Scale=0.9]{Ubuntu}
-\newfontfamily\subsectionfont[Scale=1.1]{Liberation Sans}
+\newfontfamily\lstfont{Ubuntu}
+\newfontfamily\subsectionfont{Liberation Sans}
 
 %%% Графика %%%
 \usepackage{graphicx}
