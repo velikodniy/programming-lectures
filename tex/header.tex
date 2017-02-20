@@ -45,20 +45,28 @@
 \usepackage{gensymb}
 
 %%% Шрифты документа %%%
-\usepackage{fontspec}					% Использовать OTF/TTF
+\usepackage{fontspec}
+
 \defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
-\setmainfont{Charis SIL}
-\setsansfont{Linux Biolinum O}
-\setmonofont{Ubuntu Mono}
+\setmainfont[Path = ../fonts/,
+	BoldFont = CharisSIL-B.ttf,
+  	ItalicFont = CharisSIL-I.ttf,
+  	BoldItalicFont = CharisSIL-BI.ttf]
+  	{CharisSIL-R.ttf}
+\setsansfont[Path = ../fonts/]{Ubuntu-R.ttf}
+\setmonofont[Path = ../fonts/]{UbuntuMono-R.ttf}
 
 %%% XeTeX fix
-\newfontfamily{\cyrillicfont}{Charis SIL}
+\newfontfamily{\cyrillicfont}{CharisSIL-R.ttf}[Path = ../fonts/,
+	BoldFont = CharisSIL-B.ttf,
+  	ItalicFont = CharisSIL-I.ttf,
+  	BoldItalicFont = CharisSIL-BI.ttf]
 
 %%% Семейства шрифтов %%%
-\newfontfamily\footfont{Ubuntu}
-\newfontfamily\titlefont{Ubuntu} 
-\newfontfamily\lstfont{Ubuntu Mono}
-\newfontfamily\subsectionfont{Linux Biolinum O}
+\newfontfamily\footfont{Ubuntu-R.ttf}[Path = ../fonts/]
+\newfontfamily\titlefont{Ubuntu-R.ttf}[Path = ../fonts/, FakeBold = 1.5]
+\newfontfamily\authorfont{Ubuntu-R.ttf}[Path = ../fonts/]
+\newfontfamily\lstfont{Ubuntu-R.ttf}[Path = ../fonts/]
 
 %%% Графика %%%
 \usepackage{graphicx}
