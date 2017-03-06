@@ -1,4 +1,10 @@
 \begingroup
+\fancypagestyle{city}{ %
+  \fancyhf{} % remove everything
+  \renewcommand{\headrulewidth}{0pt} % remove lines as well
+  \renewcommand{\footrulewidth}{0pt}
+  \cfoot{\large\CITY, \Year}
+}
 \begin{center}
   \begingroup
   \noindent{
@@ -9,16 +15,15 @@
       Кафедра прикладной математики и информатики
     }
     \vfill
-    \LARGE\Author\\[12pt]
     \textbf{
-      \Huge\Title\\[6pt]
-      \LARGE\SubTitle\\[12pt]
-      \textit{\PubType}
-    }
+      \LARGE\Author\\[6pt]
+      \huge\Title\\[12pt]
+    }%
+    \LARGE\textit{\PubType}
+    
     \vfill\vfill
-    \large
-    \CITY, \Year
   }
   \endgroup
 \end{center}
+\thispagestyle{city}
 \newpage
